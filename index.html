@@ -20,23 +20,31 @@
 				<img src="./assets/guitar.png" id="guitarImg">
 				<img src="./assets/mic.png" id="micImg">
 				<img src="./assets/piano.png" id="pianoImg">
+				<a-asset-item id="drum3d" src="./assets/drums/scene.gltf"></a-asset-item>
+				<a-asset-item id="guitar3d" src="./assets/guitar/scene.gltf"></a-asset-item>
+				<a-asset-item id="piano3d" src="./assets/piano/scene.gltf"></a-asset-item>
+				<a-asset-item id="mic3d" src="./assets/mic/scene.gltf"></a-asset-item>
 			</a-assets>
 
             <!-- marker identifiers -->
 			<a-marker id="drumsMarker" type="barcode" value="0">
-				<a-image src="#drumsImg" rotation="90 0 0"></a-image>
+				<!-- <a-image src="#drumsImg" rotation="90 0 0"></a-image> -->
+				 <a-gltf-model src="#drum3d" scale="0.1 0.1 0.1" animation-mixer></a-gltf-model>
+				</a-marker>
+				
+				<a-marker id="guitarMarker" type="barcode" value="1">
+				<a-gltf-model src="#guitar3d" scale="0.8 0.8 0.8" animation-mixer></a-gltf-model>
+				<!-- <a-image src="#guitarImg" rotation="90 0 0"></a-image> -->
 			</a-marker>
-
-			<a-marker id="guitarMarker" type="barcode" value="1">
-				<a-image src="#guitarImg" rotation="90 0 0"></a-image>
-			</a-marker>
-
+			
 			<a-marker id="micMarker" type="barcode" value="2">
-				<a-image src="#micImg" rotation="90 0 0"></a-image>
+				<a-gltf-model src="#mic3d"  animation-mixer></a-gltf-model>
+				<!-- <a-image src="#micImg" rotation="90 0 0"></a-image> -->
 			</a-marker>
-
+			
 			<a-marker id="pianoMarker" type="barcode" value="3">
-				<a-image src="#pianoImg" rotation="90 0 0"></a-image>
+				<a-gltf-model src="#piano3d" animation-mixer></a-gltf-model>
+				<!-- <a-image src="#pianoImg" rotation="90 0 0"></a-image> -->
 			</a-marker>
 
 			<!-- camera permissions -->
